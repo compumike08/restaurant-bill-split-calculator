@@ -2,8 +2,9 @@
 
 describe('myApp.home module', function() {
     
-    var homeCtrl;
-
+  var homeCtrl;
+  
+  beforeEach(module('ui.router'));
   beforeEach(module('myApp.home'));
 
   describe('home controller', function(){
