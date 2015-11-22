@@ -15,6 +15,16 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'src/app/bower_components/angular/angular.js',
+      'src/app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
+      'src/app/bower_components/jquery/dist/jquery.min.js',
+      'src/app/bower_components/bootstrap/dist/js/bootstrap.min.js',
+      'src/app/app.js',
+      'src/app/view1/view1.js',
+      'src/app/view2/view2.js',
+      'src/app/components/version/version.js',
+      'src/app/components/version/version-directive.js',
+      'src/app/components/version/interpolate-filter.js',
       'test/**/*.spec.js'
     ],
 
