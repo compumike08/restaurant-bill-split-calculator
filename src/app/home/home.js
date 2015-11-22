@@ -12,8 +12,10 @@
             });
     }
 
-    function HomeCtrl($scope){
+    function HomeCtrl(){
         var homeVm = this;
+        
+        
     }
 
     angular.module('myApp.home', ['ui.router'])

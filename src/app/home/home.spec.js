@@ -6,11 +6,10 @@ describe('myApp.home module', function() {
   beforeEach(module('myApp.home'));
 
   describe('home controller', function(){
-    var homeCtrl, scope;
+    var homeCtrl;
       
-    beforeEach(inject(function($controller, $rootScope){
-        scope = $rootScope.$new();
-        homeCtrl = $controller('HomeCtrl', {$scope: scope});
+    beforeEach(inject(function($controller){
+        homeCtrl = $controller('HomeCtrl');
     }));
 
     it('should ....', inject(function(){
