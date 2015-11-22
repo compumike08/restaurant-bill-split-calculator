@@ -25,12 +25,13 @@ module.exports = function(config) {
       'src/app/components/version/version.js',
       'src/app/components/version/version-directive.js',
       'src/app/components/version/interpolate-filter.js',
-      'test/**/*.spec.js'
+      'src/**/*.spec.js'
     ],
 
 
     // list of files to exclude
     exclude: [
+      'src/app/bower_components/**/*'
     ],
 
 
