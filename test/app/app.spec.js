@@ -14,6 +14,6 @@ describe('myApp', function () {
     
     it('should set $urlRouterProvider.otherwise to true', function() {
         expect($urlRouterProvider.otherwise)
-            .toHaveBeenCalledWith("/view1");
+            .toHaveBeenCalledWith("/home");
     });
 });
