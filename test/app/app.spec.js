@@ -2,11 +2,11 @@ describe('myApp', function () {
     var $urlRouterProvider;
     
     beforeEach(function () {
-        angular.module(function(_$urlRouterProvider_) {
+        module(function(_$urlRouterProvider_) {
             $urlRouterProvider = _$urlRouterProvider_;
             spyOn($urlRouterProvider, 'otherwise');
         });
-        angular.module('myApp');
+        module('myApp');
         inject();
     });
     
