@@ -18,6 +18,7 @@ module.exports = function(config) {
       'src/app/bower_components/angular/angular.js',
       'src/app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
       'src/app/bower_components/jquery/dist/jquery.min.js',
+      'src/app/bower_components/angular-mocks/angular-mocks.js',
       'src/app/bower_components/bootstrap/dist/js/bootstrap.min.js',
       'src/app/app.js',
       'src/app/view1/view1.js',
