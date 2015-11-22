@@ -1,22 +1,21 @@
 'use strict';
 
 describe('myApp.home module', function() {
-    
-  var homeCtrl;
-  
+
   beforeEach(module('ui.router'));
   beforeEach(module('myApp.home'));
 
   describe('home controller', function(){
+    var homeCtrl, scope;
       
-    beforeEach(inject(function($controller){
-        homeCtrl = $controller('HomeCtrl');
+    beforeEach(inject(function($controller, $rootScope){
+        scope = $rootScope.$new();
+        homeCtrl = $controller('HomeCtrl', {$scope: scope});
     }));
 
-    it('should ....', function(){
-      //spec body
-      expect(homeCtrl).toBeDefined();
-    });
+    it('should ....', inject(function(){
+        expect(homeCtrl).toBeDefined();
+    }));
 
   });
 });
