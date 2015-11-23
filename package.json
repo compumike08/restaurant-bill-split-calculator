@@ -16,13 +16,6 @@
     "shelljs": "^0.2.6",
     "webdriver-manager": "^7.0.1"
   },
-  "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1",
-    "preupdate-webdriver": "npm install",
-    "update-webdriver": "webdriver-manager update"
-  },
   "dependencies": {
     "bower": "^1.6.5",
     "grunt": "^0.4.5"
