@@ -1,13 +1,42 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12">
-            <form ng-submit="submit()" name="sizeOfPartyForm" id="sizeOfPartyForm" class="form-inline">
-                <div class="form-group">
-                    <label for="sizeOfParty">How Many in Your Party?</label>
-                    <input type="number" min="1" max="25" class="form-control" id="sizeOfParty" ng-model="sizeOfParty" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Continue</button>
-            </form>
+    <form name="partyForm" id="partyForm" ng-submit="HomeVm.submit()">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Members of Your Party:</h2>
+            </div>
         </div>
-    </div>
+        
+        <div ng-repeat="party in HomeVm.parties" class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div ng-form class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <label>Name/Nickname:
+                                    <input type="text" ng-model="party.name" class="form-control">
+                                </label>
+                            </div>
+                            
+                            <div class="col-xs-2">
+                                <button type="button" ng-click="HomeVm.deleteParty(party)" class="btn btn-danger">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="button" ng-click="HomeVm.addParty()" class="btn btn-success">
+                    <span class="fa fa-plus"></span>
+                </button>
+                
+                <button type="submit" class="btn btn-primary">Continue</button>
+            </div>
+        </div>
+        
+    </form>
 </div>

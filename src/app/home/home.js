@@ -12,24 +12,47 @@
             });
     }
 
-    function HomeCtrl(){
+    function HomeCtrl(PartyService){
         var homeVm = this;
-        //TODO: Create service to hold the party size info instead of storing it in a variable inside HomeCtrl.
-        var partySize;
+        homeVm.parties = [];
+        initParty();
+        
+        homeVm.addParty = function(){
+            addNewParty();
+        };
+        
+        homeVm.deleteParty = function(party){
+            deleteThisParty(party);
+        };
         
         homeVm.submit = function(){
-            //TODO: Create service to hold the party size info instead of storing it in a variable inside HomeCtrl.
-            partySize = homeVm.sizeOfParty;
+            var partyNameList = "";
+            var partyAryLength = homeVm.parties.length;
+            
+            for(var i = 0; i < partyAryLength; i++){
+                partyNameList = partyNameList + "\n" + homeVm.parties[i].name;
+            }
+            
+            window.alert(partyNameList);
         };
         
-        //TODO: Create service to hold the party size info instead of storing it in a variable inside HomeCtrl.
-        homeVm.getPartySize = function(){
-            return partySize;
-        };
+        function initParty(){
+            addNewParty();
+        }
+        
+        function addNewParty(){
+            var tempNewPartyMember = PartyService.createPartyMember();
+            homeVm.parties.push(tempNewPartyMember);
+        }
+        
+        function deleteThisParty(party){
+            var index = homeVm.parties.indexOf(party);
+            homeVm.parties.splice(index, 1);
+        }
         
     }
 
-    angular.module('myApp.home', ['ui.router'])
+    angular.module('myApp.home', ['ui.router', 'myApp.partyService'])
         .config(config)
         .controller('HomeCtrl',HomeCtrl);
 

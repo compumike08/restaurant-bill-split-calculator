@@ -15,14 +15,6 @@ describe('myApp.home module', function() {
     it('should be defined', inject(function(){
         expect(homeCtrl).toBeDefined();
     }));
-    
-    describe('sizeOfPartyForm', function(){
-        it('should process the sizeOfPartyForm submit', inject(function(){
-            homeCtrl.sizeOfParty = 5;
-            homeCtrl.submit();
-            expect(homeCtrl.getPartySize()).toEqual(5);
-        }));
-    });
 
   });
 });
