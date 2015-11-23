@@ -17,7 +17,7 @@
     "webdriver-manager": "^7.0.1"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1",
     "preupdate-webdriver": "npm install",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "bower": "^1.6.5",
+    "express": "^4.13.3",
     "grunt": "^0.4.5"
   }
 }
