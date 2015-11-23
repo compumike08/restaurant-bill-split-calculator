@@ -2,22 +2,18 @@
 
 describe('myApp.partyService module', function() {
 
-  beforeEach(module('myApp.partyService'));
+    beforeEach(module('myApp.partyService'));
+    var PartyService;
 
-  describe('partyService service', function(){
-    var createPartyMember;
-      
-    beforeEach(inject(function($injector){
-        createPartyMember = $injector.get('createPartyMember');
+    beforeEach(inject(function(_PartyService_){
+        PartyService = _PartyService_;
     }));
-    
+
     describe('createPartyMember function', function(){
         it('should create a new party member object with name property defined', function(){
-            var newPartyMember = createPartyMember();
-            
+            var newPartyMember = PartyService.createPartyMember();
+
             expect(newPartyMember.name).toBeDefined();
         });
     });
-
-  });
 });

@@ -4,6 +4,7 @@ describe('myApp.home module', function() {
 
   beforeEach(module('ui.router'));
   beforeEach(module('myApp.home'));
+  beforeEach(module('myApp.partyService'));
 
   describe('home controller', function(){
     var homeCtrl;
