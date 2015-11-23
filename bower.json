@@ -1,21 +1,19 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "restaurant-bill-split-calculator",
+  "description": "An app to split restaurant bills.",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "homepage": "https://github.com/compumike08/restaurant-bill-split-calculator",
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
     "angular-loader": "~1.4.0",
-    "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+	"bootstrap": "~3.3.5",
+	"font-awesome": "~4.4.0"
   },
   "devDependencies": {
-    "bootstrap": "~3.3.5",
-    "angular-mocks": "~1.4.8",
-    "font-awesome": "~4.4.0"
+    "angular-mocks": "~1.4.8"
   }
 }
