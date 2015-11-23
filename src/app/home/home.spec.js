@@ -7,7 +7,17 @@ describe('myApp.home module', function() {
   beforeEach(module('myApp.partyService'));
 
   describe('home controller', function(){
-    var homeCtrl;
+    var homeCtrl, partyServiceSpy;
+    
+    partyServiceSpy = {
+        createPartyMember: {
+            name: "Party 1"
+        }
+    };
+    
+    beforeEach(module(function($provide) {
+       $provide.value("PartyService", partyServiceSpy);
+    }));
       
     beforeEach(inject(function($controller){
         homeCtrl = $controller('HomeCtrl');
