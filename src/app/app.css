@@ -28,3 +28,19 @@
   content: "";
   padding: 0;
 }
+
+table tr td .btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+table.table tr td .form-group {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+table.table tr:last-of-type {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(221, 221, 221);
+}

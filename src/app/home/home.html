@@ -5,28 +5,29 @@
                 <h2>Members of Your Party:</h2>
             </div>
         </div>
-        
-        <div ng-repeat="party in HomeVm.parties" class="row">
-            <div class="col-sm-12">
-                <div class="panel panel-default">
-                    <div ng-form class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-10">
-                                <label>Name/Nickname:
-                                    <input type="text" ng-model="party.name" class="form-control">
-                                </label>
-                            </div>
-                            
-                            <div class="col-xs-2">
-                                <button type="button" ng-click="HomeVm.deleteParty(party)" class="btn btn-danger">
-                                    <span class="fa fa-remove"></span>
-                                </button>
-                            </div>
+        <table class="table table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th>Name/Nickname</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="party in HomeVm.parties">
+                    <td>
+                        <div class="form-group">
+                            <label class="sr-only" for="{{'partyMemberNameInput-' + $index}}">Name/Nickname:</label>
+                            <input id="{{'partyMemberNameInput-' + $index}}" type="text" ng-model="party.name" class="form-control">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </td>
+                    <td>
+                        <button type="button" ng-click="HomeVm.deleteParty(party)" class="btn btn-danger">
+                            <span class="fa fa-remove"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         
         <div class="row">
             <div class="col-sm-12">
