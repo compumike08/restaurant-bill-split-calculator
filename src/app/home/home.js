@@ -12,7 +12,7 @@
             });
     }
 
-    function HomeCtrl(PartyService){
+    function HomeCtrl(PartyService, PartyMemberService){
         var homeVm = this;
         homeVm.parties = [];
         initParty();
@@ -30,7 +30,14 @@
             var partyAryLength = homeVm.parties.length;
             
             for(var i = 0; i < partyAryLength; i++){
-                partyNameList = partyNameList + "\n" + homeVm.parties[i].name;
+                PartyMemberService.addPartyMember(homeVm.parties[i].name);
+            }
+            
+            var tempAry = PartyMemberService.getPartyMembers();
+            partyAryLength = PartyMemberService.getPartySize();
+            
+            for(var i = 0; i < partyAryLength; i++){
+                partyNameList = partyNameList + "\n" + tempAry[i].name;
             }
             
             window.alert(partyNameList);
@@ -52,7 +59,7 @@
         
     }
 
-    angular.module('myApp.home', ['ui.router', 'myApp.partyService'])
+    angular.module('myApp.home', ['ui.router', 'myApp.partyService', 'myApp.partyMemberService'])
         .config(config)
         .controller('HomeCtrl',HomeCtrl);
 
