@@ -9,12 +9,8 @@
         };
         return service;
         
-        function addPartyMember(in_name){
-            var tempPartyMember = {
-                name: in_name
-            };
-            
-            partyMembersArray.push(tempPartyMember);
+        function addPartyMember(in_member){
+            partyMembersArray.push(in_member);
         }
         
         function getPartyMembers(){

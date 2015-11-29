@@ -11,6 +11,7 @@ describe('myApp.home module', function() {
     
     partyServiceSpy = {
         createPartyMember: {
+            id: 0,
             name: "Party 1"
         }
     };

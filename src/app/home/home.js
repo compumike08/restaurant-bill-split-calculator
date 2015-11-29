@@ -30,14 +30,14 @@
             var partyAryLength = homeVm.parties.length;
             
             for(var i = 0; i < partyAryLength; i++){
-                PartyMemberService.addPartyMember(homeVm.parties[i].name);
+                PartyMemberService.addPartyMember(homeVm.parties[i]);
             }
             
             var tempAry = PartyMemberService.getPartyMembers();
             partyAryLength = PartyMemberService.getPartySize();
             
             for(var i = 0; i < partyAryLength; i++){
-                partyNameList = partyNameList + "\n" + tempAry[i].name;
+                partyNameList = partyNameList + "\n" + tempAry[i].id + ": " + tempAry[i].name;
             }
             
             window.alert(partyNameList);

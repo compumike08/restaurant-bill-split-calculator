@@ -1,5 +1,5 @@
 (function(){
-    var nextNum = 1;
+    var nextIdNum = 0;
 
     function PartyService(){
         var factory =  {
@@ -10,10 +10,11 @@
         function createPartyMember(){
             
             var newPartyMember = {
-                name: "Party " + nextNum
+                id: nextIdNum,
+                name: "Party " + (nextIdNum + 1)
             };
             
-            nextNum++;
+            nextIdNum++;
             return newPartyMember;
         }
         

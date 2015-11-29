@@ -15,5 +15,11 @@ describe('myApp.partyService module', function() {
 
             expect(newPartyMember.name).toBeDefined();
         });
+        
+        it('should create a new party member object with id property defined', function(){
+            var newPartyMember = PartyService.createPartyMember();
+
+            expect(newPartyMember.id).toBeDefined();
+        });
     });
 });
