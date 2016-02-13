@@ -1,4 +1,4 @@
-# Bill Splitter App [![Build Status](https://travis-ci.org/compumike08/restaurant-bill-split-calculator.svg?branch=master)](https://travis-ci.org/compumike08/restaurant-bill-split-calculator)
+# Bill Splitter App
 
 This application is still under development.
 
