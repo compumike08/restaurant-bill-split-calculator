@@ -3,6 +3,13 @@ describe('myApp', function () {
     
     beforeEach(module('ui.router'));
     
+    beforeEach(module('myApp.partyService'));
+    var PartyService;
+
+    beforeEach(inject(function(_PartyService_){
+        PartyService = _PartyService_;
+    }));
+    
     beforeEach(function () {
         module(function(_$urlRouterProvider_) {
             $urlRouterProvider = _$urlRouterProvider_;
