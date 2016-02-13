@@ -20,17 +20,20 @@ module.exports = function(config) {
       'src/app/bower_components/jquery/dist/jquery.min.js',
       'src/app/bower_components/angular-mocks/angular-mocks.js',
       'src/app/bower_components/bootstrap/dist/js/bootstrap.min.js',
+      
       'src/app/app.js',
-      'src/app/home/home.js',
-      'src/app/components/version/version.js',
-      'src/app/components/version/version-directive.js',
-      'src/app/components/version/interpolate-filter.js',
+      
+      'src/app/home/*.js',
+      'src/app/services/*.js',
+      'src/app/components/version/*.js',
+      
       'src/**/*.spec.js'
     ],
 
 
     // list of files to exclude
     exclude: [
+       'src/app/components/version/*_test.js'
     ],
 
 
