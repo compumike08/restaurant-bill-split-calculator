@@ -5,29 +5,32 @@
                 <h2>Members of Your Party:</h2>
             </div>
         </div>
-        <table class="table table-striped table-responsive">
-            <thead>
-                <tr>
-                    <th>Name/Nickname</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="party in HomeVm.parties">
-                    <td>
-                        <div class="form-group">
-                            <label class="sr-only" for="{{'partyMemberNameInput-' + $index}}">Name/Nickname:</label>
-                            <input id="{{'partyMemberNameInput-' + $index}}" type="text" ng-model="party.name" class="form-control">
-                        </div>
-                    </td>
-                    <td>
-                        <button type="button" ng-click="HomeVm.deleteParty(party)" class="btn btn-danger">
-                            <span class="fa fa-remove"></span>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name/Nickname</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="party in HomeVm.parties">
+                        <td>
+                            <div class="form-group">
+                                <label class="sr-only" for="{{'partyMemberNameInput-' + $index}}">Name/Nickname:</label>
+                                <input id="{{'partyMemberNameInput-' + $index}}" type="text" ng-model="party.name" class="form-control">
+                            </div>
+                        </td>
+                        <td>
+                            <button type="button" ng-click="HomeVm.deleteParty(party)" class="btn btn-danger">
+                                <span class="fa fa-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         
         <div class="row">
             <div class="col-sm-12">
