@@ -12,7 +12,7 @@
             });
     }
 
-    function HomeCtrl(PartyService, PartyMemberService){
+    function HomeCtrl(PartyService, PartyMemberService, $state){
         var homeVm = this;
         homeVm.parties = [];
         initParty();
@@ -40,7 +40,7 @@
                 partyNameList = partyNameList + "\n" + tempAry[i].id + ": " + tempAry[i].name;
             }
             
-            window.alert(partyNameList);
+            $state.go('items');
         };
         
         function initParty(){

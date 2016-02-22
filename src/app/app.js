@@ -10,7 +10,7 @@
         $rootScope.$state = $state;
     }
     
-    angular.module('myApp', ['ui.router', 'myApp.home', 'myApp.version'])
+    angular.module('myApp', ['ui.router', 'myApp.home', 'myApp.items', 'myApp.version'])
         .config(appConfig)
         .run(appRun);
 
