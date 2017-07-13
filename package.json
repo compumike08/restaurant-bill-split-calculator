@@ -5,7 +5,7 @@
   "description": "An app to split restaurant bills.",
   "repository": "https://github.com/compumike08/restaurant-bill-split-calculator",
   "engines": {
-    "node": "4.2.2"
+    "node": "~6.11.1"
   },
   "devDependencies": {
     "http-server": "^0.6.1",
